@@ -5,6 +5,7 @@ from app.forms import SignUpForm, PostForm, LoginForm
 from app.models import Post, User
 
 @app.route("/index")
+@app.route("/")
 def index():
     posts = Post.query.all()
     return render_template('index.html', posts=posts)
