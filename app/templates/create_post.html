@@ -3,15 +3,18 @@
 {% block title %}Phonebook | Create Contact{% endblock %}
 
 {% block content %}
-<h4>Create A New Post</h4>
+<h4>Create a new Phonebook Contact</h4>
 <form method="post">
     {{ form.csrf_token }}
     <div class="form-group">
         {{ form.title.label }}
-        {{ form.title(class='form-control', placeholder='Enter Title') }}
+        {{ form.title(class='form-control', placeholder='Enter name (last, first)') }}
 
         {{ form.body.label }}
-        {{ form.body(class='form-control', placeholder='Enter Body') }}
+        {{ form.body(class='form-control', placeholder='Enter phone number') }}
+
+        {{ form.address.label }}
+        {{ form.address(class='form-control', placeholder='Enter address') }}
 
         {{ form.submit(class='btn btn-primary w-100 mt-3') }}
     </div>

@@ -83,7 +83,7 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    flash('You have logged out of the blog', 'secondary')
+    flash('You have logged out of the Phonebook', 'secondary')
     return redirect(url_for('index'))
 
 

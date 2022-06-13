@@ -3,7 +3,7 @@
 {% block title %}Phonebook | Edit Contact{% endblock %}
 
 {% block content %}
-<h4>Edit {{ post.title }}</h4>
+<h4>Edit <b>{{ post.title }}</b></h4>
 <form method="post">
     {{ form.csrf_token }}
     <div class="form-group">
@@ -12,6 +12,9 @@
 
         {{ form.body.label }}
         {{ form.body(class='form-control', value=post.body) }}
+
+        {{ form.address.label }}
+        {{ form.address(class='form-control', value=post.address) }}
 
         {{ form.submit(class='btn btn-primary w-100 mt-3') }}
     </div>

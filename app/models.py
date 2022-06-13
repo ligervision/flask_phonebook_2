@@ -34,7 +34,7 @@ class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50), nullable=False)
     body = db.Column(db.String(50), nullable=False)
-    address = db.Column(db.String(100), nullable=False)
+    address = db.Column(db.String(100))
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id')) # FOREIGN KEY(user_id) REFERENCES user(id)
 
