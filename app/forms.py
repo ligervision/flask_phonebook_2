@@ -14,7 +14,7 @@ class SignUpForm(FlaskForm):
 class PostForm(FlaskForm):
     title = StringField('Name', validators=[DataRequired()])
     body = StringField('Phone Number', validators=[DataRequired()])
-    address = StringField('Phone Number', validators=[DataRequired()])
+    address = StringField('Address', validators=[DataRequired()])
     submit = SubmitField()
 
 

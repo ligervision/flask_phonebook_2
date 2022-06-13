@@ -4,9 +4,9 @@
 
 {% block content %}
 {% if current_user.is_authenticated %}
-    <h1>Hello {{ current_user.username }}, you look wonderful today!</h1>
+    <h1>Hello {{ current_user.username }}, what phone numbers would you like to find?!</h1>
 {% else %}
-    <h1>Hello, please sign up or log in to use our blog</h1>
+    <h1>Hello, please sign up or log in to access Phonebook.</h1>
 {% endif %}
             
 {% for post in posts %}
