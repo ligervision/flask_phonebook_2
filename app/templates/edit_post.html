@@ -3,7 +3,9 @@
 {% block title %}Phonebook | Edit Contact{% endblock %}
 
 {% block content %}
-<h4>Edit <b>{{ post.title }}</b></h4>
+<br>
+<h6>EDIT</h6>
+<h4><b>{{ post.title }}</b></h4>
 <form method="post">
     {{ form.csrf_token }}
     <div class="form-group">

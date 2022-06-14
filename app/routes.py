@@ -44,9 +44,10 @@ def create_post():
         # Get data from the form
         post_title = form.title.data
         post_body = form.body.data
+        post_address = form.address.data
         user_id = current_user.id
         # Add new post to database with form info
-        new_post = Post(title=post_title, body=post_body, user_id=user_id)
+        new_post = Post(title=post_title, body=post_body, address=post_address, user_id=user_id)
         # Flash a success message to the user
         flash(f'"{new_post.title}" by {new_post.author.username} has been created', 'success')
         # Return to the home page
@@ -105,8 +106,9 @@ def edit_single_post(post_id):
         # Get form data
         new_title = form.title.data
         new_body = form.body.data
+        new_address = form.address.data
         # update the post to edit with the form data
-        post_to_edit.update(title=new_title, body=new_body)
+        post_to_edit.update(title=new_title, body=new_body, address=new_address)
 
         flash(f'{post_to_edit.title} has been updated', 'primary')
         return redirect(url_for('view_single_post', post_id=post_to_edit.id))
